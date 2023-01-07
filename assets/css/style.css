@@ -406,3 +406,37 @@ button.btn:hover {
 .top-news .slick-next::before {
     content: "\f105";
 }
+
+/* Footer Menu */
+.footer-menu {
+    position: relative;
+    background: black;
+}
+
+.footer-menu .container {
+    padding: 15px 0;
+    border-top: 1px solid black;
+}
+
+.footer-menu .f-menu {
+    font-size: 0;
+    text-align: center;
+}
+
+.footer-menu .f-menu a {
+    color: white;
+    font-size: 14px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid white;
+}
+
+.footer-menu .f-menu a:hover {
+    color: lightcoral;
+}
+
+.footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
