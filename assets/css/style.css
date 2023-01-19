@@ -458,7 +458,7 @@ button.btn:hover {
 .footer .footer-widget ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: square;
 }
 
 .footer .footer-widget ul li {
@@ -476,12 +476,12 @@ button.btn:hover {
     line-height: 23px;
 }
 
-.footer .footer-widget ul li a::before {
+/* .footer .footer-widget ul li a::before {
     content: '\f061';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     padding-right: 5px;
-}
+} */
 
 .footer .footer-widget ul li a:hover {
     padding-left: 10px;
@@ -495,6 +495,11 @@ button.btn:hover {
 }
 
 .footer .contact-info p i {
+    color: white;
+    margin-right: 5px;
+}
+
+.footer .contact-info address i {
     color: white;
     margin-right: 5px;
 }
@@ -554,7 +559,6 @@ button.btn:hover {
     right: 0;
     padding: 0 15px;
     border: none;
-    background: ;
     color: white;
     font-size: 14px;
     border: 1px solid white;
@@ -960,6 +964,10 @@ button.btn:hover {
 
 .sidebar .news-list .nl-item .nl-title a:hover {
     color: #FF6F61;
+}
+
+.sidebar .news-list tr:nth-child(even) {
+    background-color: #ffc0b2;
 }
 
 .sidebar .sidebar-widget .tab-news {
