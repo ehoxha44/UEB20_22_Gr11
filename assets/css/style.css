@@ -167,6 +167,12 @@ button.btn:hover {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .top-bar .tb-contact,
+    .top-bar .tb-menu {
+        text-align: center;
+    }
+}
 
 /* Brand */
 .brand {
@@ -227,6 +233,24 @@ button.btn:hover {
     color: white;
 }
 
+@media (min-width: 768px) {
+    .brand {
+        max-height: 90px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .brand .b-logo,
+    .brand .b-ads,
+    .brand .b-search {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .brand .b-search {
+        margin-bottom: 0;
+    }
+} 
 
 /* Nav Bar */
 .nav-bar {
@@ -266,6 +290,43 @@ button.btn:hover {
     border: 0;
     border-radius: 0;
     background: wheat;
+}
+
+@media (min-width: 768px) {
+    .nav-bar,
+    .nav-bar .navbar {
+        background: #FF6F61 !important;
+    }
+    
+    .nav-bar .navbar-brand {
+        display: none;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 8px 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 768px) {   
+    .nav-bar,
+    .nav-bar .navbar {
+        padding: 3px 0;
+        background: #FF6F61 !important;
+    }
+    
+    .nav-bar a.nav-link {
+        padding: 5px;
+    }
+    
+    .nav-bar .dropdown-menu {
+        box-shadow: none;
+    }
+    
+    .nav-bar .social {
+        display: none;
+    }
 }
 
 .nav-bar .social {
@@ -728,7 +789,7 @@ button.btn:hover {
 .main-news .mn-list ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type:disc;
 }
 
 .main-news .mn-list ul li {
@@ -745,14 +806,14 @@ button.btn:hover {
     line-height: 23px;
 }
 
-.main-news .mn-list ul li::before {
+/* .main-news .mn-list ul li::before {
     position: absolute;
     content: '\f061';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #000000;
     left: 1px;
-}
+} */
 
 .main-news .mn-list ul li a:hover {
     color: #FF6F61;
@@ -966,9 +1027,9 @@ button.btn:hover {
     color: #FF6F61;
 }
 
-.sidebar .news-list tr:nth-child(even) {
+/* .sidebar .news-list tr:nth-child(even) {
     background-color: #ffc0b2;
-}
+} */
 
 .sidebar .sidebar-widget .tab-news {
     position: relative;
