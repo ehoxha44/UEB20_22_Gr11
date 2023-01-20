@@ -1288,3 +1288,20 @@ button.btn:hover {
 .single-news .sn-slider .slick-next::before {
     content: "\f105";
 }
+
+#front {
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto-Thin.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+#fontfaceuse {
+    font-family: 'roboto';
+    font-weight: 100;
+}

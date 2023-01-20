@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portali informativ - Telegrafi</title>
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
@@ -47,6 +45,28 @@
 
         // Array:
         const cars = ["Saab", "Volvo", "BMW"];
+
+        var birthday = new Date("January 13, 2003 00:00:00");
+        console.log(birthday);
+
+        color = color.replace("Yellow", "Green");
+        console.log(color);
+
+        lastName = lastName.replace("Johnson", "Smith");
+        console.log(lastName);
+
+        let color1 = "Yellow is a color";
+        let color2 = "yellow is a color too";
+        let color3 = "Green is not yellow";
+            
+        let colorMatch1 = color1.match("Yellow");
+        console.log(colorMatch1); // Output: ["Yellow"]
+            
+        let colorMatch2 = color2.match("Yellow");
+        console.log(colorMatch2); // Output: null
+            
+        let colorMatch3 = color3.match("Green");
+        console.log(colorMatch3); // Output: null
 
         const cmimi1 = 5;
         const cmimi2 = 6;
@@ -194,6 +214,35 @@
         listaEmrave.addName("Enis")
         listaEmrave.addName("Erijon")
         listaEmrave.addName("Cristiano")
+
+
+        // funksioni qe parametrin e derguar e kthen si string
+        function convertToString(value) {
+            return value.toString();
+        }
+
+        console.log(convertToString(123));
+        console.log(convertToString(true));
+        console.log(convertToString([1, 2, 3]));
+
+        // metoda toExponential 
+        function convertToExponential(value) {
+            return value.toExponential();
+        }
+        console.log(convertToExponential(123.45678));
+
+        // metoda MAX_VALUE
+        let Numbers = [10, 50, 45, 23, 1, 3, 60, 90, 120]
+
+        let maxValue = Math.max(...Numbers, Number.MAX_VALUE);
+        console.log(maxValue); 
+
+        let z = "hello";
+        console.log(isNaN(z));
+
+        let y = "20";
+        console.log(isNaN(y));
+
     </script>
 </head>
 <body>
@@ -269,6 +318,8 @@
                         </div>
                         <a href="single-page.html" class="nav-item nav-link">Single Page</a>
                         <a href="contact.html" class="nav-item nav-link">Qëndro në kontakt</a>
+                        <a href="read-more.html" class="nav-item nav-link">Lexo më shumë</a>
+                        <a href="article.html" class="nav-item nav-link">Article</a>
                     </div>
                     <div class="social ml-auto">
                         <a href="file:///C:\Users\ccc\Desktop\twitter.jpg" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -539,7 +590,7 @@
                             </p>
                             <form>
                                 <input class="form-control" type="email" placeholder="Emaili juaj...">
-                                <button class="btn">Submit</button>
+                                <button id="show-message" class="btn">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -577,12 +628,17 @@
     <script src="assets/js/script.js"></script>
 
     <script type="text/javascript">
-        const btnShowMsg = document.getElementById("show-message")
+        let btnShowMsg = document.getElementById("show-message")
 
         btnShowMsg.addEventListener("click", function(){
             setTimeout(function (){
-                alert("A doni te konfirmoni emailin tuaj?")
-            }, 3000)
+                let confirmEmail = confirm("A doni te konfirmoni emailin tuaj?");
+                if (confirmEmail) {
+                    alert("Ju konfirmuat emailin tuaj!");
+                } else {
+                    alert("Ju lutem konfirmoni emailin tuaj.");
+                }
+            }, 1000)
         })
     </script>
 </body>

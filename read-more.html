@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portali informativ - Telegrafi</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
 
@@ -84,7 +81,17 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
                         <a href="index.html" class="nav-item nav-link active">Lajme</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Sub Item 1</a>
+                                <a href="#" class="dropdown-item">Sub Item 2</a>
+                            </div>
+                        </div>
+                        <a href="single-page.html" class="nav-item nav-link">Single Page</a>
                         <a href="contact.html" class="nav-item nav-link">Qëndro në kontakt</a>
+                        <a href="read-more.html" class="nav-item nav-link">Lexo më shumë</a>
+                        <a href="article.html" class="nav-item nav-link">Article</a>
                     </div>
                     <div class="social ml-auto">
                         <a href="file:///C:\Users\ccc\Desktop\twitter.jpg" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -458,7 +465,7 @@
                             </p>
                             <form>
                                 <input class="form-control" type="email" placeholder="Emaili juaj...">
-                                <button class="btn">Submit</button>
+                                <button id="show-message" class="btn">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -497,5 +504,19 @@
 
     <!-- Template Javascript -->
     <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        let btnShowMsg = document.getElementById("show-message")
+
+        btnShowMsg.addEventListener("click", function(){
+            setTimeout(function (){
+                let confirmEmail = confirm("A doni te konfirmoni emailin tuaj?");
+                if (confirmEmail) {
+                    alert("Ju konfirmuat emailin tuaj!");
+                } else {
+                    alert("Ju lutem konfirmoni emailin tuaj.");
+                }
+            }, 1000)
+        })
+    </script>
 </body>
 </html>
